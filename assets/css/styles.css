@@ -1,0 +1,155 @@
+/* global */
+:root {
+    --primary-dark-blue: hsl(158, 36%, 37%); 
+    --primary-cream: hsl(30, 38%, 92%); 
+
+    --neutral-dark-blue: hsl(212, 21%, 14%); 
+    --neutral-grayish-blue: hsl(228, 12%, 48%); 
+    --neutral-white: hsl(0, 0%, 100%); 
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--neutral-dark-blue);
+    background-color: var(--primary-cream);
+}
+
+
+/* product card componant start */
+.card {
+    display: block;
+    margin: 10vh auto 2vh auto;
+    width: 650px;
+    border-radius: 10px;
+}
+.content {
+    display: flex;
+}
+/* left side */
+section img {
+    width: 300px;
+    height: 500px;
+    border-radius: 7px 0 0 7px;
+}
+.mobile.hidden {
+    display: none;
+}
+/* right side */
+aside {
+    padding: 30px 30px;
+    height: 500px;
+    height: 500px;
+    background-color: var(--neutral-white);
+}
+.txt-content {
+    margin: 0;
+    height: 43px;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: .8rem;
+    margin: 0 0 20px 0;
+}
+.txt-content span {
+    font-family: 'Fraunces', serif;
+    font-size: 2.7rem;
+    font-weight: 700;
+    line-height: 37px;
+}
+.txt-content p {
+    line-height: 29px;
+    letter-spacing: 1px;
+    font-size: 1.09rem;
+}
+.txt-content p, .txt-content h1 {
+    color: var(--neutral-grayish-blue);
+}
+.price h2 {
+    font-size: 2.5rem;
+    font-family: 'Fraunces', serif;
+    color: var(--primary-dark-blue);
+    margin: 27px 0;
+}
+.price h2 span {
+    color: var(--neutral-grayish-blue);
+    font-size: .85rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+button {
+    width: 100%;
+    height: 45px;
+    background-color: var(--primary-dark-blue);
+    color: var(--neutral-white);
+    margin: 0 auto;
+    border-radius: 7px;
+    border: none;
+}
+button:hover {
+    background-color: var(--neutral-dark-blue);
+    cursor: pointer;
+}
+button img {
+    padding: 0 10px;
+}
+/* product card componant end */
+
+/* copyright */
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 690px) {
+    .card {
+        display: flex;
+        margin: 5vh auto 2vh auto;
+        width: 400px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 700px;
+    }
+    section img {
+        background-image: url(/assets/images/image-product-mobile.jpg) center;
+        object-fit: cover;
+        width: 400px;
+        height: 250px;
+        border-radius: 7px 7px 0 0;
+    }
+    .mobile.hidden {
+        display: flex;
+    }
+    .desktop.hidden {
+        display: none;
+    }
+    aside {
+        width: 400px;
+        border-radius: 7px;
+    }
+    .txt-content span {
+        font-family: 'Fraunces', serif;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 37px;
+        line-break: strict;
+    }
+
+}
